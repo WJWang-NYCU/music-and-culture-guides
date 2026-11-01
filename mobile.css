@@ -1,0 +1,2 @@
+.menu-button{display:none;border:0;background:transparent;color:var(--deep);font-size:22px;padding:4px;cursor:pointer}
+@media(max-width:760px){.menu-button{display:block}.site-header{position:relative}.site-header nav{display:none;position:absolute;right:20px;top:64px;background:var(--paper);border:1px solid var(--line);padding:14px 18px;z-index:5}.site-header nav.is-open{display:grid;gap:9px}.revolution-card img{width:100%;margin:0 0 18px}.article-content{overflow-wrap:anywhere}}
