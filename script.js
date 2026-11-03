@@ -1,5 +1,5 @@
 const mobileStyles = document.createElement('style');
-mobileStyles.textContent = '.menu-button{display:none}@media(max-width:760px){.menu-button{display:block!important;border:0;background:transparent;color:#30473e;font-size:22px}.site-header{position:relative}.site-header nav{display:none;position:absolute;right:20px;top:64px;background:#fbfaf6;border:1px solid #d9ddd5;padding:14px 18px;z-index:5}.site-header nav.is-open{display:grid;gap:9px}}';
+mobileStyles.textContent = '.menu-button{display:none}.feature-card img{object-position:center top}@media(max-width:760px){.menu-button{display:block!important;border:0;background:transparent;color:#30473e;font-size:22px}.site-header{position:relative}.site-header nav{display:none;position:absolute;right:20px;top:64px;background:#fbfaf6;border:1px solid #d9ddd5;padding:14px 18px;z-index:5}.site-header nav.is-open{display:grid;gap:9px}}';
 document.head.append(mobileStyles);
 
 document.querySelectorAll('[data-menu-button]').forEach((button) => {
