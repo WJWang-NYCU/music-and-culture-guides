@@ -27,7 +27,7 @@ const handelCard = `<article class="feature-card added-card"><a class="image-lin
 if (location.pathname.endsWith('/articles.html')) document.querySelector('.listing')?.insertAdjacentHTML('beforeend', handelCard);
 if (location.pathname.endsWith('/') || location.pathname.endsWith('/index.html')) document.querySelector('.intro')?.insertAdjacentHTML('beforeend', handelCard);
 
-const minsooCard = `<article class="feature-card added-card"><a class="image-link" href="articles/minsoo-sohn-wtc-2026.html"><img src="assets/minsoo-portrait-2026.png" alt="孫旻秀巴哈平均律獨奏會"></a><div><p class="eyebrow">音樂會・古典音樂導聆</p><h2><a href="articles/minsoo-sohn-wtc-2026.html">孫旻秀：巴哈《平均律》第一冊</a></h2><p>二十四組前奏曲與賦格的聆聽地圖，從聲部、調性到節目冊意象。</p><a class="text-link" href="articles/minsoo-sohn-wtc-2026.html">閱讀專文 <span>→</span></a></div></article>`;
+const minsooCard = `<article class="feature-card added-card"><a class="image-link" href="articles/minsoo-sohn-wtc-2026.html?v=6879f9e"><img src="assets/minsoo-portrait-2026.png" alt="孫旻秀巴哈平均律獨奏會"></a><div><p class="eyebrow">音樂會・古典音樂導聆</p><h2><a href="articles/minsoo-sohn-wtc-2026.html?v=6879f9e">孫旻秀：巴哈《平均律》第一冊</a></h2><p>二十四組前奏曲與賦格的聆聽地圖，從聲部、調性到節目冊意象。</p><a class="text-link" href="articles/minsoo-sohn-wtc-2026.html?v=6879f9e">閱讀專文 <span>→</span></a></div></article>`;
 if (location.pathname.endsWith('/articles.html')) document.querySelector('.listing')?.insertAdjacentHTML('beforeend', minsooCard);
 if (location.pathname.endsWith('/') || location.pathname.endsWith('/index.html')) document.querySelector('.intro')?.insertAdjacentHTML('beforeend', minsooCard);
 
