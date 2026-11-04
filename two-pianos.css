@@ -1,0 +1,15 @@
+.concert-cover {
+  background: #f4f2eb;
+  object-position: 30% 31% !important;
+}
+
+.lead-image .concert-cover {
+  width: 100%;
+  height: min(680px, 62vw);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .lead-image .concert-cover { height: 52vw; }
+}
