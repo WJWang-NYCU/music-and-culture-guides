@@ -39,6 +39,8 @@ if (twoPianosWorks) {
     if (link.href.includes('E2cIH5tMAoA')) link.textContent = '今野早苗、菅生晴美、前場央子、前場聖子 ↗';
     if (link.href.includes('LxKQpEVYWog')) link.textContent = 'Empyrean Orchestra、Kevin Griffiths、Sherniyaz Mussakhan ↗';
   });
+  const nodameParagraph = [...document.querySelectorAll('#world p')].find((item) => item.textContent.includes('《交響情人夢》中千秋與野田妹'));
+  nodameParagraph?.insertAdjacentHTML('beforebegin', '<figure class="article-image"><img src="../assets/Nodame.png" alt="交響情人夢千秋與野田妹在鋼琴旁的畫面"><figcaption>《交響情人夢》千秋與野田妹的鋼琴畫面。</figcaption></figure>');
   addListeningLink('莫札特 K.448', '阿格麗希、巴倫波因', 'https://youtu.be/USl7qUWU33k');
   addListeningLink('德布西《黑與白》', '阿格麗希、Iddo Bar-Shai', 'https://youtu.be/HHZ3RYAHq20');
   addListeningLink('拉威爾《圓舞曲》', '阿格麗希、Nelson Freire', 'https://youtu.be/Q0Qo1anGvfQ');
