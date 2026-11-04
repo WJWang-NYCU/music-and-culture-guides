@@ -41,7 +41,7 @@ if (twoPianosWorks) {
   });
   const nodameParagraph = [...document.querySelectorAll('#world p')].find((item) => item.textContent.includes('《交響情人夢》中千秋與野田妹'));
   nodameParagraph?.insertAdjacentHTML('beforebegin', '<figure class="article-image"><img src="../assets/Nodame.png" alt="交響情人夢千秋與野田妹在鋼琴旁的畫面"><figcaption>《交響情人夢》千秋與野田妹的鋼琴畫面。</figcaption></figure>');
-  if (nodameParagraph && !nodameParagraph.querySelector('a[href*="m_q4avgMQ8Q"]')) nodameParagraph.insertAdjacentHTML('beforeend', ' <a href="https://youtu.be/m_q4avgMQ8Q?si=tvhQbXacJQqcsGPB" target="_blank" rel="noreferrer">嚴俊傑：交響情人夢名場面，莫札特雙鋼琴奏鳴曲為何這麼曖昧？↗</a>');
+  if (nodameParagraph && !document.querySelector('a[href*="m_q4avgMQ8Q"]')) nodameParagraph.insertAdjacentHTML('afterend', '<p><a href="https://youtu.be/m_q4avgMQ8Q?si=tvhQbXacJQqcsGPB" target="_blank" rel="noreferrer">嚴俊傑、海牛（音樂家無聊人生）：交響情人夢名場面，莫札特雙鋼琴奏鳴曲為何這麼曖昧？↗</a></p>');
   addListeningLink('莫札特 K.448', '阿格麗希、巴倫波因', 'https://youtu.be/USl7qUWU33k');
   addListeningLink('德布西《黑與白》', '阿格麗希、Iddo Bar-Shai', 'https://youtu.be/HHZ3RYAHq20');
   addListeningLink('拉威爾《圓舞曲》', '阿格麗希、Nelson Freire', 'https://youtu.be/Q0Qo1anGvfQ');
