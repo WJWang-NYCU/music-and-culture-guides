@@ -9,6 +9,44 @@ document.querySelectorAll('[data-menu-button]').forEach((button) => {
   });
 });
 
+const twoPianosWorks = document.querySelector('#works');
+if (twoPianosWorks) {
+  twoPianosWorks.querySelector('h2').textContent = '從作品聽雙鋼琴';
+  const performances = [
+    ['阿格麗希、巴倫波因', 'https://youtu.be/USl7qUWU33k'],
+    ['阿格麗希、Iddo Bar-Shai', 'https://youtu.be/HHZ3RYAHq20'],
+    ['阿格麗希、Nelson Freire', 'https://youtu.be/wYLasmJdeEg'],
+    ['阿格麗希、Nelson Goerner', 'https://vimeo.com/27052613'],
+    ['阿格麗希、Nelson Freire', 'https://youtu.be/Q0Qo1anGvfQ']
+  ];
+  document.querySelectorAll('#world .timeline-table tr').forEach((row, index) => {
+    if (!index || !performances[index - 1]) return;
+    const [name, href] = performances[index - 1];
+    const work = row.cells[0].textContent.replace('↗', '').trim();
+    row.cells[0].textContent = work;
+    row.cells[1].innerHTML = `<a href="${href}" target="_blank" rel="noreferrer">${name} ↗</a>`;
+  });
+  const addListeningLink = (heading, name, href) => {
+    const title = [...twoPianosWorks.querySelectorAll('h3')].find((item) => item.textContent.startsWith(heading));
+    let paragraph = title?.nextElementSibling;
+    while (paragraph && paragraph.tagName !== 'P') paragraph = paragraph.nextElementSibling;
+    if (!paragraph || paragraph.querySelector(`a[href="${href}"]`)) return;
+    paragraph.insertAdjacentHTML('beforeend', ` <a href="${href}" target="_blank" rel="noreferrer">${name} ↗</a>`);
+  };
+  document.querySelectorAll('#works a').forEach((link) => {
+    if (link.href.includes('DBgV14408Q8')) link.textContent = '尤森兄弟，BWV 1060 第一樂章 ↗';
+    if (link.href.includes('5ZUCSJfT0Ds')) link.textContent = '尤森兄弟，BWV 1060 第二樂章 ↗';
+    if (link.href.includes('E2cIH5tMAoA')) link.textContent = '今野早苗、菅生晴美、前場央子、前場聖子 ↗';
+    if (link.href.includes('LxKQpEVYWog')) link.textContent = 'Empyrean Orchestra、Kevin Griffiths、Sherniyaz Mussakhan ↗';
+  });
+  addListeningLink('莫札特 K.448', '阿格麗希、巴倫波因', 'https://youtu.be/USl7qUWU33k');
+  addListeningLink('德布西《黑與白》', '阿格麗希、Iddo Bar-Shai', 'https://youtu.be/HHZ3RYAHq20');
+  addListeningLink('拉威爾《圓舞曲》', '阿格麗希、Nelson Freire', 'https://youtu.be/Q0Qo1anGvfQ');
+  addListeningLink('八手的兩個例子', '王旼、邱琳云、陳威存、蘇品諼（曲目資料）', 'https://www.opentix.life/event/2011709863623639041');
+  addListeningLink('拉赫曼尼諾夫', '阿格麗希、Nelson Freire《第二號組曲》', 'https://youtu.be/wYLasmJdeEg');
+  addListeningLink('拉赫曼尼諾夫', '阿格麗希、Nelson Goerner《交響舞曲》', 'https://vimeo.com/27052613');
+}
+
 const listeningSection = document.querySelector('#listen');
 if (listeningSection) {
   const more = document.createElement('p');
