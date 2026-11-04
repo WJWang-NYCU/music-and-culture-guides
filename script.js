@@ -45,6 +45,7 @@ if (twoPianosWorks) {
   addListeningLink('八手的兩個例子', '王旼、邱琳云、陳威存、蘇品諼（曲目資料）', 'https://www.opentix.life/event/2011709863623639041');
   addListeningLink('拉赫曼尼諾夫', '阿格麗希、Nelson Freire《第二號組曲》', 'https://youtu.be/wYLasmJdeEg');
   addListeningLink('拉赫曼尼諾夫', '阿格麗希、Nelson Goerner《交響舞曲》', 'https://vimeo.com/27052613');
+  twoPianosWorks.insertAdjacentHTML('beforeend', `<aside class="revolution-card"><p class="eyebrow">影劇延伸</p><h3>《Four Hands, Two Sonatas》裡的《骷髏之舞》</h3><p>韓劇《Four Hands, Two Sonatas》（포핸즈）以兩位鋼琴學生的競爭與合作為主線。這段《骷髏之舞》把四手聯彈放進劇情：兩人必須共用一台琴的音域與空間，與兩台鋼琴八手的分工形成有趣對照。</p><p>觀看時，可以留意兩位角色如何處理同一架琴上的手位、起音與節奏同步，再回頭比較八手版本裡四人分配低音、旋律與裝飾音的方式。<a href="https://www.youtube.com/watch?v=U7aOEDO5egM&list=RDU7aOEDO5egM&start_radio=1" target="_blank" rel="noreferrer">宋江、李濬榮《骷髏之舞》四手聯彈片段 ↗</a></p></aside>`);
 }
 
 const listeningSection = document.querySelector('#listen');
