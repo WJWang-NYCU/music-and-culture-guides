@@ -61,6 +61,20 @@ if (listeningSection) {
 // The public edition contains only web-ready content; remove the former source-file note.
 document.querySelector('.source-note')?.remove();
 
+const pingtungRachmaninoff = document.querySelector('#rachmaninoff');
+if (pingtungRachmaninoff) {
+  const setLink = (oldPart, href, label) => {
+    const link = pingtungRachmaninoff.querySelector(`a[href*="${oldPart}"]`);
+    if (!link) return;
+    link.href = href;
+    link.textContent = `${label} ↗`;
+  };
+  setLink('OfFc8Zr1R8Y', 'https://youtu.be/NEEYbvTh21o?si=Gnm2bxDS7sFkPTvL', '林東赫、阿格麗希：《交響舞曲》第一樂章');
+  setLink('vimeo.com/449119236', 'https://youtu.be/hnOHI_ZaH4o?si=q6Hf6NAyWG_jn5TN', '林東赫、阿格麗希：《交響舞曲》第三樂章');
+  const secondHeading = [...pingtungRachmaninoff.querySelectorAll('h3')].find((heading) => heading.textContent.startsWith('II.'));
+  if (secondHeading && !pingtungRachmaninoff.querySelector('a[href*="5Hh4hN4deP0"]')) secondHeading.insertAdjacentHTML('afterend', '<p><a href="https://youtu.be/5Hh4hN4deP0?si=r4UwKZD5G67etJU3" target="_blank" rel="noreferrer">林東赫、阿格麗希：《交響舞曲》第二樂章 ↗</a></p>');
+}
+
 const choCard = `<article class="feature-card added-card"><a class="image-link" href="articles/seong-jin-cho-2026.html"><img src="assets/cho-2026.png" alt="趙成珍鋼琴獨奏會"></a><div><p class="eyebrow">音樂會・曲目導聆</p><h2><a href="articles/seong-jin-cho-2026.html">趙成珍鋼琴獨奏會：中文曲目導聆</a></h2><p>從巴赫、荀白克、舒曼到十四首蕭邦圓舞曲，帶著聆聽線索走進現場。</p><a class="text-link" href="articles/seong-jin-cho-2026.html">閱讀專文 <span>→</span></a></div></article>`;
 if (location.pathname.endsWith('/articles.html')) document.querySelector('.listing')?.insertAdjacentHTML('beforeend', choCard);
 if (location.pathname.endsWith('/') || location.pathname.endsWith('/index.html')) document.querySelector('.intro')?.insertAdjacentHTML('beforeend', choCard);
