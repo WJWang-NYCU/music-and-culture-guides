@@ -75,6 +75,39 @@ if (pingtungRachmaninoff) {
   if (secondHeading && !pingtungRachmaninoff.querySelector('a[href*="5Hh4hN4deP0"]')) secondHeading.insertAdjacentHTML('afterend', '<p><a href="https://youtu.be/5Hh4hN4deP0?si=r4UwKZD5G67etJU3" target="_blank" rel="noreferrer">林東赫、阿格麗希：《交響舞曲》第二樂章 ↗</a></p>');
 }
 
+// Handel in Vienna: make the complete printed programme visible as a set of
+// direct listening links, rather than leaving listeners to use search pages.
+const handelProgramme = document.querySelector('#programme');
+if (handelProgramme && !handelProgramme.querySelector('.handel-programme-links')) {
+  handelProgramme.insertAdjacentHTML('beforeend', `<aside class="revolution-card handel-programme-links"><p class="eyebrow">本場完整曲目・點選聆聽</p><ol><li><a href="https://www.youtube.com/watch?v=H3-m4LzDVdY" target="_blank" rel="noreferrer">Günther Rost、4D Barock：韓德爾《降 B 大調管風琴協奏曲》Op. 7 No. 1，HWV 306 ↗</a></li><li><a href="https://www.youtube.com/watch?v=FPmbv5yngGk" target="_blank" rel="noreferrer">Lucy Crowe、Mark Padmore、The English Concert：《As steals the morn upon the night》／HWV 55 ↗</a></li><li><a href="https://chambermusicsociety.org/cms-on-screen/digital-archive/2018/handel-let-the-bright-seraphim-from-samson-for-soprano-trumpet-strings-and-continuo-hwv-57" target="_blank" rel="noreferrer">Chamber Music Society of Lincoln Center：《Let the bright Seraphim》／《參孫》HWV 57 ↗</a></li><li><a href="https://www.youtube.com/watch?v=AaYUycaqeSc" target="_blank" rel="noreferrer">Günther Rost、4D Barock：韓德爾《F 大調管風琴協奏曲》Op. 4 No. 4，HWV 292 ↗</a></li><li><a href="https://www.youtube.com/watch?v=Eeom7cS9ty4" target="_blank" rel="noreferrer">Vox Luminis、Lionel Meunier：韓德爾《聖塞西莉亞日頌》HWV 76 ↗</a></li></ol><p>以上依節目單順序列出；這些是對應曲目的延伸聆聽，並非本場演出錄音。</p></aside>`);
+}
+
+const handelOrgan = document.querySelector('#organ');
+if (handelOrgan) {
+  handelOrgan.querySelectorAll('a[href*="results?search_query=Handel+HWV+306"]').forEach((link) => {
+    link.href = 'https://www.youtube.com/watch?v=H3-m4LzDVdY';
+    link.textContent = 'Günther Rost、4D Barock：HWV 306 演出 ↗';
+  });
+}
+const handelMorn = document.querySelector('#morn');
+if (handelMorn) {
+  handelMorn.querySelectorAll('a[href*="results?search_query=Handel+As+steals"]').forEach((link) => {
+    link.href = 'https://www.youtube.com/watch?v=FPmbv5yngGk';
+    link.textContent = 'Lucy Crowe、Mark Padmore、The English Concert：〈As steals the morn〉↗';
+  });
+}
+const handelSamson = document.querySelector('#samson');
+if (handelSamson) {
+  handelSamson.querySelectorAll('a[href*="results?search_query=Handel+Let+the+bright+Seraphim"]').forEach((link) => {
+    link.href = 'https://chambermusicsociety.org/cms-on-screen/digital-archive/2018/handel-let-the-bright-seraphim-from-samson-for-soprano-trumpet-strings-and-continuo-hwv-57';
+    link.textContent = 'Chamber Music Society of Lincoln Center：〈Let the bright Seraphim〉演出 ↗';
+  });
+}
+const handelCecilia = document.querySelector('#cecilia');
+if (handelCecilia && !handelCecilia.querySelector('a[href*="Eeom7cS9ty4"]')) {
+  handelCecilia.insertAdjacentHTML('beforeend', '<p><a href="https://www.youtube.com/watch?v=Eeom7cS9ty4" target="_blank" rel="noreferrer">Vox Luminis、Lionel Meunier：《聖塞西莉亞日頌》HWV 76 完整演出 ↗</a></p>');
+}
+
 const choCard = `<article class="feature-card added-card"><a class="image-link" href="articles/seong-jin-cho-2026.html"><img src="assets/cho-2026.png" alt="趙成珍鋼琴獨奏會"></a><div><p class="eyebrow">音樂會・曲目導聆</p><h2><a href="articles/seong-jin-cho-2026.html">趙成珍鋼琴獨奏會：中文曲目導聆</a></h2><p>從巴赫、荀白克、舒曼到十四首蕭邦圓舞曲，帶著聆聽線索走進現場。</p><a class="text-link" href="articles/seong-jin-cho-2026.html">閱讀專文 <span>→</span></a></div></article>`;
 if (location.pathname.endsWith('/articles.html')) document.querySelector('.listing')?.insertAdjacentHTML('beforeend', choCard);
 if (location.pathname.endsWith('/') || location.pathname.endsWith('/index.html')) document.querySelector('.intro')?.insertAdjacentHTML('beforeend', choCard);
