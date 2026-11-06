@@ -75,42 +75,44 @@ if (pingtungRachmaninoff) {
   if (secondHeading && !pingtungRachmaninoff.querySelector('a[href*="5Hh4hN4deP0"]')) secondHeading.insertAdjacentHTML('afterend', '<p><a href="https://youtu.be/5Hh4hN4deP0?si=r4UwKZD5G67etJU3" target="_blank" rel="noreferrer">林東赫、阿格麗希：《交響舞曲》第二樂章 ↗</a></p>');
 }
 
+const isHandelGuide = location.pathname.endsWith('/articles/handel-in-vienna-2026.html');
+
 // Handel in Vienna: make the complete printed programme visible as a set of
 // direct listening links, rather than leaving listeners to use search pages.
 const handelProgramme = document.querySelector('#programme');
-if (handelProgramme && !handelProgramme.querySelector('.handel-programme-links')) {
+if (isHandelGuide && handelProgramme && !handelProgramme.querySelector('.handel-programme-links')) {
   handelProgramme.insertAdjacentHTML('beforeend', `<aside class="revolution-card handel-programme-links"><p class="eyebrow">本場完整曲目・點選聆聽</p><ol><li><a href="https://www.youtube.com/watch?v=H3-m4LzDVdY" target="_blank" rel="noreferrer">Günther Rost、4D Barock：韓德爾《降 B 大調管風琴協奏曲》Op. 7 No. 1，HWV 306 ↗</a></li><li><a href="https://www.youtube.com/watch?v=FPmbv5yngGk" target="_blank" rel="noreferrer">Lucy Crowe、Mark Padmore、The English Concert：《As steals the morn upon the night》／HWV 55 ↗</a></li><li><a href="https://chambermusicsociety.org/cms-on-screen/digital-archive/2018/handel-let-the-bright-seraphim-from-samson-for-soprano-trumpet-strings-and-continuo-hwv-57" target="_blank" rel="noreferrer">Chamber Music Society of Lincoln Center：《Let the bright Seraphim》／《參孫》HWV 57 ↗</a></li><li><a href="https://www.youtube.com/watch?v=AaYUycaqeSc" target="_blank" rel="noreferrer">Günther Rost、4D Barock：韓德爾《F 大調管風琴協奏曲》Op. 4 No. 4，HWV 292 ↗</a></li><li><a href="https://www.youtube.com/watch?v=Eeom7cS9ty4" target="_blank" rel="noreferrer">Vox Luminis、Lionel Meunier：韓德爾《聖塞西莉亞日頌》HWV 76 ↗</a></li></ol><p>以上依節目單順序列出；這些是對應曲目的延伸聆聽，並非本場演出錄音。</p></aside>`);
 }
 
 const handelOrgan = document.querySelector('#organ');
-if (handelOrgan) {
+if (isHandelGuide && handelOrgan) {
   handelOrgan.querySelectorAll('a[href*="results?search_query=Handel+HWV+306"]').forEach((link) => {
     link.href = 'https://www.youtube.com/watch?v=H3-m4LzDVdY';
     link.textContent = 'Günther Rost、4D Barock：HWV 306 演出 ↗';
   });
 }
 const handelMorn = document.querySelector('#morn');
-if (handelMorn) {
+if (isHandelGuide && handelMorn) {
   handelMorn.querySelectorAll('a[href*="results?search_query=Handel+As+steals"]').forEach((link) => {
     link.href = 'https://www.youtube.com/watch?v=FPmbv5yngGk';
     link.textContent = 'Lucy Crowe、Mark Padmore、The English Concert：〈As steals the morn〉↗';
   });
 }
 const handelSamson = document.querySelector('#samson');
-if (handelSamson) {
+if (isHandelGuide && handelSamson) {
   handelSamson.querySelectorAll('a[href*="results?search_query=Handel+Let+the+bright+Seraphim"]').forEach((link) => {
     link.href = 'https://chambermusicsociety.org/cms-on-screen/digital-archive/2018/handel-let-the-bright-seraphim-from-samson-for-soprano-trumpet-strings-and-continuo-hwv-57';
     link.textContent = 'Chamber Music Society of Lincoln Center：〈Let the bright Seraphim〉演出 ↗';
   });
 }
 const handelCecilia = document.querySelector('#cecilia');
-if (handelCecilia && !handelCecilia.querySelector('a[href*="Eeom7cS9ty4"]')) {
+if (isHandelGuide && handelCecilia && !handelCecilia.querySelector('a[href*="Eeom7cS9ty4"]')) {
   handelCecilia.insertAdjacentHTML('beforeend', '<p><a href="https://www.youtube.com/watch?v=Eeom7cS9ty4" target="_blank" rel="noreferrer">Vox Luminis、Lionel Meunier：《聖塞西莉亞日頌》HWV 76 完整演出 ↗</a></p>');
 }
 
 // Restored from the supplied 19-page Handel in Vienna listening guide.
 const handelPdfEdition = document.querySelector('#programme');
-if (handelPdfEdition && !document.querySelector('#handel-context')) {
+if (isHandelGuide && handelPdfEdition && !document.querySelector('#handel-context')) {
   handelPdfEdition.insertAdjacentHTML('afterend', `<section id="handel-context"><h2>韓德爾與十八世紀倫敦的音樂生活</h2><p>韓德爾（George Frideric Handel, 1685–1759）出生於德國哈勒，年輕時曾赴義大利學習，後來在倫敦建立重要的音樂事業。他與巴赫同年出生，卻走出不同道路：巴赫的重心多與教會和宮廷職務相關；韓德爾則在歌劇、神劇與公共音樂演出中發展出鮮明的戲劇感。</p><p>本場將管風琴協奏曲、神劇相關選曲與頌歌相連，讓管弦樂、獨唱、二重唱及合唱各自展示性格。Orchester Wiener Akademie 採取「歷史知情演奏」的觀念，從作品時代的樂器、演奏技術、裝飾音、速度與音響平衡出發；現場可留意弦樂線條的清晰度、管樂音色，以及管風琴和樂團彼此呼應的方式。</p><aside class="revolution-card"><p class="eyebrow">本頁依上傳導聆整理</p><p><strong>演出：</strong>2026 年 11 月 1 日 19:30，Musikverein Wien, Großer Saal</p><p><strong>演出者：</strong>Orchester Wiener Akademie；Martin Haselböck 指揮；Balázs Szabó 管風琴；Sophie Junker 女高音；Gwilym Bowen 男高音；Singverein der Gesellschaft der Musikfreunde in Wien。</p><p>曲目名稱與順序依導聆所載 Musikverein 當時公告整理；第二首為 HWV 55 二重唱，仍以演出當晚節目單為準。</p></aside></section>`);
 
   const organSection = document.querySelector('#organ');
