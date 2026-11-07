@@ -51,6 +51,14 @@ if (twoPianosWorks) {
   twoPianosWorks.insertAdjacentHTML('beforeend', `<aside class="revolution-card"><p class="eyebrow">影劇延伸</p><h3>《Four Hands, Two Sonatas》裡的《骷髏之舞》</h3><figure class="article-image"><img src="../assets/K_Drama_Four_Hands.png" alt="Four Hands Two Sonatas 兩位主角的水彩人物插畫"><figcaption>《Four Hands, Two Sonatas》人物水彩插畫，非劇照。</figcaption></figure><p>韓劇《Four Hands, Two Sonatas》（포핸즈）以兩位鋼琴學生的競爭與合作為主線。這段《骷髏之舞》把四手聯彈放進劇情：兩人必須共用一台琴的音域與空間，與兩台鋼琴八手的分工形成有趣對照。</p><p>觀看時，可以留意兩位角色如何處理同一架琴上的手位、起音與節奏同步，再回頭比較八手版本裡四人分配低音、旋律與裝飾音的方式。<a href="https://www.youtube.com/watch?v=U7aOEDO5egM&list=RDU7aOEDO5egM&start_radio=1" target="_blank" rel="noreferrer">宋江、李濬榮《骷髏之舞》四手聯彈片段 ↗</a></p></aside>`);
 }
 
+const twoPianosEvent = document.querySelector('#event');
+if (twoPianosWorks && twoPianosEvent && !twoPianosEvent.querySelector('.actual-programme')) {
+  twoPianosEvent.querySelector('h2').textContent = '實際演出曲目與當日導聆';
+  twoPianosEvent.insertAdjacentHTML('afterbegin', `<aside class="revolution-card actual-programme"><p class="eyebrow">2026.11.07・實際節目單</p><p>下列依現場節目單整理，包含一琴四手、雙鋼琴及兩琴八手三種編制；原頁面原有的作品導聆與影音延伸完整保留於後。</p><h3>上半場｜巴赫與莫札特</h3><ol><li><strong>巴赫／Mary Howe：〈羊群安然〉，BWV 208</strong><br>一琴四手｜嚴俊傑、Peter Ovcharov</li><li><strong>巴赫／György Kurtág：BWV 106 器樂序奏〈小奏鳴曲〉</strong><br>一琴四手｜汪奕聞、盧易之</li><li><strong>莫札特：D 大調雙鋼琴奏鳴曲，K.448</strong><br>雙鋼琴｜嚴俊傑、Peter Ovcharov</li><li><strong>莫札特／Vyacheslav Gryaznov：《土耳其狂想曲》</strong><br>兩琴八手｜嚴俊傑、Peter Ovcharov、汪奕聞、盧易之</li></ol><p><em>中場休息</em></p><h3>下半場｜舞曲、抒情與序曲</h3><ol start="5"><li><strong>米堯：《屋頂上的牛》，Op. 58</strong><br>一琴四手｜汪奕聞、Peter Ovcharov</li><li><strong>拉赫曼尼諾夫：C 小調第二號鋼琴協奏曲，Op. 18，第二樂章 Adagio sostenuto</strong><br>雙鋼琴｜嚴俊傑、盧易之</li><li><strong>拉赫曼尼諾夫：《義大利波爾卡》</strong><br>一琴四手｜汪奕聞、Peter Ovcharov</li><li><strong>葛令卡／Vyacheslav Gryaznov：《魯斯蘭與柳德米拉》序曲</strong><br>兩琴八手｜嚴俊傑、Peter Ovcharov、汪奕聞、盧易之</li></ol><p><strong>三個現場聆聽線索：</strong>一琴四手先聽同一鍵盤上的音量與踏板協調；雙鋼琴追蹤主題怎麼在兩台琴間交接；兩琴八手則留意快速音群、低音與旋律能否在四人同時推進時依然清楚。</p></aside>`);
+  const legacyLead = [...twoPianosEvent.querySelectorAll('p')].find((paragraph) => paragraph.textContent.startsWith('2026 年 11 月 7 日'));
+  legacyLead?.insertAdjacentHTML('beforebegin', '<h3 class="legacy-programme-heading">原有預告版本與延伸導聆（保留）</h3>');
+}
+
 const listeningSection = document.querySelector('#listen');
 if (listeningSection) {
   const more = document.createElement('p');
