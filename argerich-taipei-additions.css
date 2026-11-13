@@ -1,0 +1,38 @@
+.source-quote {
+  border-left: 3px solid var(--sage);
+  color: var(--deep);
+  font: 500 1.1rem/1.8 "Noto Serif TC", serif;
+  margin: 1.8rem 0 0.85rem;
+  padding: 0.35rem 0 0.35rem 1.25rem;
+}
+
+.quote-translation {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.quote-translation a {
+  display: inline;
+  margin-left: 0.25rem;
+}
+
+.author-note {
+  border-top: 3px solid var(--sage);
+}
+
+.addition-sources {
+  margin-top: 1rem;
+}
+
+.addition-sources ul {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .source-quote {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+  }
+}
