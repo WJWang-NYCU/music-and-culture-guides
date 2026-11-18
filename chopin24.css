@@ -1,0 +1,30 @@
+.chopin24-hero { background: linear-gradient(135deg, #18283a, #536681 54%, #a76547); color: #fff; padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1.3rem, 6vw, 5rem); }
+.chopin24-hero-inner { max-width: 1100px; margin: auto; display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.chopin24-hero .eyebrow, .chopin24-hero .article-meta { color: #e9d8c8; }
+.chopin24-hero h1 { color: #fff; font-size: clamp(2.7rem, 6vw, 5.2rem); line-height: .98; margin: .25rem 0 .7rem; }
+.chopin24-hero .dek { font-size: clamp(1.15rem, 2.4vw, 1.55rem); }
+.chopin24-hero img { width: 100%; max-height: 510px; object-fit: contain; filter: drop-shadow(0 18px 35px rgba(0,0,0,.3)); }
+.chopin24-main { max-width: 1100px; margin: 0 auto; padding: clamp(2.5rem, 6vw, 5rem) 1.3rem; }
+.chopin24-intro { max-width: 760px; font-size: 1.12rem; }
+.chopin24-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 2.4rem 0; background: #d8d8d5; }
+.chopin24-facts div { background: #f5f3ed; padding: 1.2rem; }
+.chopin24-facts b { display: block; color: #a76547; font-size: 1.35rem; }
+.chopin24-section { margin-top: 4rem; }
+.chopin24-section h2 { margin-bottom: .5rem; }
+.schedule-image { width: 100%; border: 1px solid #dedbd5; }
+.schedule-note { color: #65655f; font-size: .94rem; }
+.time-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.8rem; }
+.time-card { border-top: 5px solid #a76547; background: #f5f3ed; padding: 1.35rem; }
+.time-card.night { border-color: #526681; }.time-card.day { border-color: #6b8d87; }
+.time-card h3 { margin: .1rem 0 .9rem; }.time-card ul { padding-left: 1.15rem; margin: 0; }.time-card li { margin: .38rem 0; }
+.venue { font-size: .82rem; font-weight: bold; letter-spacing: .04em; }.venue.music { color: #783b83; }.venue.recital { color: #42454b; }
+.chopin24-callout { background: #eef1f1; border-left: 5px solid #526681; padding: 1.2rem 1.4rem; margin-top: 2rem; }
+.chopin24-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }.chopin24-actions a { background: #526681; color: white; padding: .75rem 1rem; text-decoration: none; }.chopin24-actions a:hover { background: #34343a; }
+.programme-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; margin-top: 1.5rem; }
+.programme-list details { border: 1px solid #ddd9d2; background: #fff; }
+.programme-list summary { cursor: pointer; padding: .95rem 1rem; font-weight: 700; }
+.programme-list summary::marker { color: #a76547; }.programme-list details p { padding: 0 1rem 1rem; margin: 0; color: #4d4c49; }
+.programme-list .music summary { border-left: 4px solid #783b83; }.programme-list .recital summary { border-left: 4px solid #42454b; }
+.journey-block { margin: 2.5rem 0 3.5rem; }.journey-block > h3 { font-size: 1.65rem; margin-bottom: .2rem; }.journey-block.sunset > h3 { color: #a76547; }.journey-block.night > h3 { color: #526681; }.journey-block.day > h3 { color: #547b75; }
+.ticket-grid, .history-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.4rem; }.ticket-grid div, .history-grid div { padding: 1rem; background: #f5f3ed; }.ticket-grid strong, .history-grid b { display: block; margin-bottom: .35rem; }.resource-list { columns: 2; padding-left: 1.2rem; }.resource-list li { margin: .6rem 0; break-inside: avoid; }
+@media (max-width: 760px) { .chopin24-hero-inner { grid-template-columns: 1fr; }.chopin24-hero img { max-height: 360px; }.chopin24-facts, .time-grid, .programme-list, .ticket-grid, .history-grid { grid-template-columns: 1fr; }.resource-list { columns: 1; } }
